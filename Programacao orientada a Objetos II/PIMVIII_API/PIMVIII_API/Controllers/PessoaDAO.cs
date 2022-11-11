@@ -17,12 +17,12 @@ namespace PIMVIII_API.Controllers
         public async IAsyncEnumerable<bool> Exclua(Pessoa p)
         {
             // Busca pela pessoa no database
-            Pessoa pessoaParaDeletar = await Consulte(p.Id);
+            Pessoa pessoaParaDeletar = await Consulte(p.Cpf);
 
             //Checa se a pessoa existe no banco
             if (pessoaParaDeletar == null)
             {
-                throw new Exception($"Usuário com cpf:{p.Id} não foi encontrado.");
+                throw new Exception($"Usuário com cpf:{p.Cpf} não foi encontrado.");
             }
 
             _context.Pessoas.Remove(pessoaParaDeletar);
@@ -44,12 +44,12 @@ namespace PIMVIII_API.Controllers
         public async IAsyncEnumerable<bool> Altere(Pessoa p)
         {
             // Busca pela pessoa no database
-            Pessoa pessoaParaAtualizar = await Consulte(p.Id);
+            Pessoa pessoaParaAtualizar = await Consulte(p.Cpf);
 
             //Checa se a pessoa existe no banco
             if(pessoaParaAtualizar == null)
             {
-                throw new Exception($"Usuário com cpf:{p.Id} não foi encontrado.");
+                throw new Exception($"Usuário com cpf:{p.Cpf} não foi encontrado.");
             }
 
             // Modifica as propriedades do objeto, atualizando para as propriedades dadas no parametro
@@ -71,7 +71,5 @@ namespace PIMVIII_API.Controllers
             // Busca por um objeto Pessoa no banco de dados, baseado em um cpf dado como parametro
             return await _context.Pessoas.FirstOrDefaultAsync(x => x.Cpf == cpf);
         }
-
-
     }
 }

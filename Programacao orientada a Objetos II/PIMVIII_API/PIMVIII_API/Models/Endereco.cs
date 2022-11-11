@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PIMVIII_API.Models;
 
-public partial class Endereco
+public  class Endereco
 {
     public int Id { get; set; }
 
