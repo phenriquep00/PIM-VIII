@@ -11,11 +11,7 @@ body {
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+
 
 .container {
     display: flex;
@@ -24,18 +20,34 @@ textarea {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: #D9D9D9;
     padding: 20px;
+    background: #abbaab; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .header {
-    padding-bottom: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98vw;
+    height: 14vh;
+    margin-bottom: 6rem;
+    font-size: 32px;
+    font-weight: bolder;
+    color: white;
+    border-radius: 8px;
+    background: #00B4DB; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .search-container {
@@ -49,20 +61,103 @@ textarea {
 }
 
 .search {
-    width: 27rem;
-    height: 3.18rem;
+    width: 40rem;
+    height: 4.2rem;
     border-radius: 1rem;
-    padding: 8px;
-    background-color: #9496B2;    
-    border: 1px #fff;
+    padding: 10px;
+    background-color: #0e7490;
+    border: 1px #000;
 }
 
 .add-user-buttom {
     display: flex;
-    background-color: #63D161;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #22c55e;
     margin: 2rem;
     color: white;
-    border:none;
+    border: none;
+    padding: 8px;
+    border-radius: .5rem;
+    width: 20rem;
+    align-items: center;
+}
+
+.divisor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    width: 80%;
+    height: 0.6px;
+    background-color: black;
+}
+
+.resultados {
+    display: flex;
+    width: 25rem;
+    background-color: #6d28d9;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.table-container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.table-header {
+    background-color: #9496B2;
+    border-width: 1px;
+    border-color: black;
+}
+
+.table-resultados {
+    background-color: #818cf8;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.edit-user-buttom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f59e0b;
+    margin: 2rem;
+    color: black;
+    border: none;
+    padding: 8px;
+    border-radius: .5rem;
+    width: 20rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.remove-user-buttom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #e11d48;
+    margin: 2rem;
+    color: black;
+    border: none;
+    padding: 8px;
+    border-radius: .5rem;
+    width: 20rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.editar-remover {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -83,8 +178,9 @@ textarea {
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(255, 255, 255, 0.52);
+    color: #e2e8f0;
     opacity: 1; /* Firefox */
+    font-weight: bold;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
