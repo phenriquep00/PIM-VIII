@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="gerenciamento_de_usuarios_pim_viii">Gerenciamento de usuarios PIM VIII</string>
+    <string name="deletar">Deletar</string>
+    <string name="editar">Editar</string>
+    <string name="buscar_usuario">Buscar usuario</string>
+    <string name="cadastrar_usuario">Cadastrar usuario</string>
+    <string name="table_layout_4_open" />
+    <string name="table_layout_4_open_shortcut" />
+    <string name="table_layout_4_save" />
+    <string name="table_layout_4_save_shortcut" />
+    <string name="resultados">Resultados</string>
+    <string name="id">Id</string>
+    <string name="nome">Nome</string>
+    <string name="cpf">Cpf</string>
+    <string name="endere_o">Endereço</string>
+    <string name="telefones">Telefones</string>
+    <string name="endereço" />
+    <string name="endereco" />
+</resources>
