@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PIMVIII_API.props" />
+</Project>
