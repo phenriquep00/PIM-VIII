@@ -2,19 +2,26 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <%-- Elemento conteiner --%>
     <div class="container">
+        <%-- Header da pagina --%>
         <header class="header"> Gerenciamento de usuarios PIM VIII </header>
 
+        <%-- Conteúdo da pagina --%>
         <main class="content">
-            <div class="search-container">
+
+            <%-- Sessão de pesquisa --%>
+            <section class="search-container">
                 <asp:TextBox CssClass="search" runat="server" placeholder="Buscar usuario"> </asp:TextBox>
-            </div>
+                <asp:Button CssClass="search-button" runat="server" Text="Buscar"/>
+            </section>
 
             <asp:Button CssClass="add-user-buttom" runat="server" Text="Cadastrar usuario" />
 
-            <div class="divisor">
+            <%-- Sessão de resultado --%>
+            <section class="divisor">
                 <div class="resultados"> Resultados </div>
-            </div>
+            </section>
 
             <div class="table-container">
                 <asp:Table CssClass="table" runat="server">
@@ -27,19 +34,20 @@
                     </asp:TableHeaderRow>
 
                     <asp:TableRow CssClass="table-resultados" BorderWidth="1">
-                        <asp:TableCell></asp:TableCell>
-                        <asp:TableCell></asp:TableCell>
-                        <asp:TableCell></asp:TableCell>
-                        <asp:TableCell></asp:TableCell>
-                        <asp:TableCell></asp:TableCell>
+                        <asp:TableCell> 3 </asp:TableCell>
+                        <asp:TableCell> Maria Santos Silva Souza </asp:TableCell>
+                        <asp:TableCell> 11111111 </asp:TableCell>
+                        <asp:TableCell> Rua Teste</asp:TableCell>
+                        <asp:TableCell> +55 11111111 </asp:TableCell>
                     </asp:TableRow>
                 </asp:Table>
             </div>
 
-            <div class="editar-remover">
+            <%-- Sessão dos botões editar/remover --%>
+            <section class="editar-remover">
                 <asp:Button CssClass="edit-user-buttom" runat="server" Text="Editar usuario" />
                 <asp:Button CssClass="remove-user-buttom" runat="server" Text="Remover usuario" />
-            </div>
+            </section>
         </main>
     </div>
 </asp:Content>

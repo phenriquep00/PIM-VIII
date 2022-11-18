@@ -69,6 +69,15 @@ body {
     border: 1px #000;
 }
 
+.search-button {
+    padding: 10px;
+    background-color: #0e7490;
+    border-radius: 1rem;
+    border: 1px #000;
+    color: #e2e8f0;
+    font-weight: bold;
+}
+
 .add-user-buttom {
     display: flex;
     flex-direction: row;
@@ -187,6 +196,6 @@ body {
     color: rgba(255, 255, 255, 0.52);
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+:-ms-input-placeholder { /* Microsoft Edge */
     color: rgba(255, 255, 255, 0.52);
 }
